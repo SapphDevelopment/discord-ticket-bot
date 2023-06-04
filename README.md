@@ -1,6 +1,8 @@
-# Discord.js Bot
+# Discord Ticket Bot - BETA
 
-This is a Discord.js bot developed by Sapphire Devs. It aims to provide a convenient solution for TypeScript users who may be unfamiliar with creating handlers and other TypeScript-specific features.
+> If you need more information about these projects, go to [Project Discord's Page](https://github.com/SapphireDevs/project-discord)
+
+This is a Discord.js bot developed by Sapphire Devs. It serves as a ticket system bot with additional features such as Discord sharding, slash command handling, event handling, error handling, and ticket management commands.
 
 ## Features
 
@@ -8,15 +10,20 @@ This is a Discord.js bot developed by Sapphire Devs. It aims to provide a conven
 2. Slash Command Handling + SubCommand Handling
 3. Event Handler
 4. Simple Error Handling
+5. Ticket Management Commands
+6. Ticket Creation and Closing
+7. Ticket Transcripts
 
-## Made With
+## Technologies Used
 
 The bot is built using the following technologies:
 
 - [Node.js](https://nodejs.org)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Prisma](https://www.prisma.io/)
 - [Discord.js](https://discord.js.org/)
 - [Discord Hybrid Sharding](https://www.npmjs.com/package/discord-hybrid-sharding)
+- [Discord HTML Transcripts](https://www.npmjs.com/package/discord-html-transcripts)
 
 ## How to Contribute
 
@@ -38,10 +45,29 @@ You can join Sapphire Devs on the following platforms:
 
 Thanks to the following contributors who have made this project possible:
 
-<a href="https://github.com/sapphiredevs/discord/graphs/contributors">
-  <img src="https://stg.contrib.rocks/image?repo=sapphiredevs/discord" alt="Contributors" />
+<a href="https://github.com/sapphiredevs/discord-ticket-bot/graphs/contributors">
+  <img src="https://stg.contrib.rocks/image?repo=sapphiredevs/discord-ticket-bot" alt="Contributors" />
 </a>
 
 ---
 
 Featured By Project Discord
+
+## Images
+
+Here are some screenshots showcasing the ticket system in action:
+
+### Setting up the ticket system
+![Setting up the ticket system](./images/setting-it-up.png)
+
+### Creating a ticket
+![Creating a ticket](./images/new-ticket-created.png)
+
+### Closing a ticket
+![Closing a ticket](./images/closing-a-ticket.png)
+
+### Getting the transcript
+![Getting the transcript](./images/transcript.png)
+
+### Viewing the transcript
+![Viewing the transcript](./images/viewing-a-transcript.png)
