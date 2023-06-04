@@ -11,7 +11,7 @@
     "watch": "npx tsc -w",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "format": "prettier --write '*/**/*.{js,jsx,ts,tsx}'"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SapphireDevs/discord.git"
@@ -35,11 +35,15 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.8",
+    "prisma": "^4.15.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@prisma/client": "^4.15.0",
+    "discord-html-transcripts": "^3.1.4",
     "discord-hybrid-sharding": "^2.1.2",
     "discord.js": "^14.11.0",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "nanoid": "^4.0.2"
   }
 }
