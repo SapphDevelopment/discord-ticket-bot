@@ -15,12 +15,16 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import path, { dirname } from 'node:path';
 import { readdirSync } from 'node:fs';
 
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
+
 export class DiscordClient extends Client {
     public commands: Collection<string, CommandInterface>;
     public subcommands: Collection<string, CommandInterface>;
     public events: Collection<string, EventInterface>;
     public cooldowns: Collection<string, Collection<string, number>>;
     public config: ConfigInterface;
+    public db: typeof prisma;
     public cluster: ClusterClient<DiscordClient>;
     constructor() {
         super({
@@ -63,6 +67,7 @@ export class DiscordClient extends Client {
         this.events = new Collection();
         this.cooldowns = new Collection();
         this.config = config;
+        this.db = prisma;
         this.cluster = new ClusterClient(this);
     }
 
