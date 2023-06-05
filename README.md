@@ -1,4 +1,4 @@
-# Discord Ticket Bot - BETA
+# Discord Ticket Bot
 
 > If you need more information about these projects, go to [Project Discord's Page](https://github.com/SapphireDevs/project-discord)
 
