@@ -57,17 +57,17 @@ Featured By Project Discord
 
 Here are some screenshots showcasing the ticket system in action:
 
-### Setting up the ticket system
-![Setting up the ticket system](./images/setting-it-up.png)
+### Ticket Message
+![Setting up the ticket system](./images/ticket%20message.png)
 
-### Creating a ticket
-![Creating a ticket](./images/new-ticket-created.png)
+### Ticket Created
+![Creating a ticket](./images/new%20ticket%20created.png)
 
 ### Closing a ticket
-![Closing a ticket](./images/closing-a-ticket.png)
+![Closing a ticket](./images/closing%20a%20ticket.png)
 
 ### Getting the transcript
-![Getting the transcript](./images/transcript.png)
+![Getting the transcript](./images/getting%20the%20transcript.png)
 
 ### Viewing the transcript
-![Viewing the transcript](./images/viewing-a-transcript.png)
+![Viewing the transcript](./images/viewing%20a%20transcript.png)
