@@ -40,6 +40,18 @@ const event: EventInterface = {
             });
 
         if (customId === 'createTicket') {
+            const existingTicket = await client.db.tickets.findFirst({
+                where: {
+                    guildId: guild.id,
+                    ownerId: member.id,
+                },
+            });
+            if (existingTicket)
+                return interaction.reply({
+                    content: `${client.config.emojis.error} Oh no! You already have a open ticket!`,
+                    ephemeral: true,
+                });
+
             await guild.channels
                 .create({
                     name: `ticket-${member.user.tag}`,

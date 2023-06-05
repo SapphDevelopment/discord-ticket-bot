@@ -22,7 +22,7 @@ model Tickets {
   guildId String @unique
   channelId String @unique
   ticketId String
-  ownerId String
+  ownerId String @unique
   closed Boolean @default(false)
   guild Guild @relation(fields: [guildId], references: [guildId])
 }
