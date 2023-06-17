@@ -54,7 +54,7 @@ const event: EventInterface = {
 
             await guild.channels
                 .create({
-                    name: `ticket-${member.user.tag}`,
+                    name: `ticket-${member.user.username}`,
                     topic: `**User**: ${userMention(member.id)}\n**Ticket ID**: ${ticketId}`,
                     parent: settings.category,
                     type: ChannelType.GuildText,
@@ -184,7 +184,7 @@ const event: EventInterface = {
                             `- ${member.id}`,
                             `## Ticket Closer:`,
                             `- ${userMention(interaction.user.id)}`,
-                            `- ${interaction.user.tag}`,
+                            `- ${interaction.user.username}`,
                             `- ${interaction.user.id}`,
                         ].join('\n'),
                         files: [transcript],
