@@ -180,7 +180,7 @@ const event: EventInterface = {
                             `# Transcript - ${ticketId}`,
                             `## Ticket Owner:`,
                             `- ${userMention(member.id)}`,
-                            `- ${member.user.tag}`,
+                            `- ${member.user.username}`,
                             `- ${member.id}`,
                             `## Ticket Closer:`,
                             `- ${userMention(interaction.user.id)}`,

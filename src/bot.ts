@@ -8,7 +8,6 @@ import {
     GatewayIntentBits,
     Partials,
 } from 'discord.js';
-import { ClusterClient, getInfo } from 'discord-hybrid-sharding';
 import { config } from './config.js';
 
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -22,14 +21,10 @@ export class DiscordClient extends Client {
     public commands: Collection<string, CommandInterface>;
     public subcommands: Collection<string, CommandInterface>;
     public events: Collection<string, EventInterface>;
-    public cooldowns: Collection<string, Collection<string, number>>;
     public config: ConfigInterface;
     public db: typeof prisma;
-    public cluster: ClusterClient<DiscordClient>;
     constructor() {
         super({
-            shards: getInfo().SHARD_LIST,
-            shardCount: getInfo().TOTAL_SHARDS,
             intents: [
                 GatewayIntentBits.AutoModerationConfiguration,
                 GatewayIntentBits.AutoModerationExecution,
@@ -65,19 +60,15 @@ export class DiscordClient extends Client {
         this.commands = new Collection();
         this.subcommands = new Collection();
         this.events = new Collection();
-        this.cooldowns = new Collection();
         this.config = config;
         this.db = prisma;
-        this.cluster = new ClusterClient(this);
     }
 
     public async loadClient() {
         try {
-            this.cluster.on('ready', async () => {
-                await this.loadCommands();
-                await this.loadEvents();
-                this.loadErrorLog();
-            });
+            await this.loadCommands();
+            await this.loadEvents();
+            this.loadErrorLog();
 
             this.login(this.config.bot.token);
         } catch (error) {

@@ -18,14 +18,12 @@ export interface EventInterface {
 }
 
 export interface CommandInterface {
-    cooldown?: number;
     subCommand?: string;
     data: SlashCommandBuilder | any;
     execute: (...args: any[]) => any;
 }
 
 export interface SubCommandInterface {
-    cooldown?: number;
     subCommand?: string;
     data: SlashCommandBuilder | any;
 }
