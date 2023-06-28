@@ -6,13 +6,12 @@ This is a Discord.js bot developed by Sapphire Devs. It serves as a ticket syste
 
 ## Features
 
-1. Discord Sharding (Discord-Hybrid-Sharding)
-2. Slash Command Handling + SubCommand Handling
-3. Event Handler
-4. Simple Error Handling
-5. Ticket Management Commands
-6. Ticket Creation and Closing
-7. Ticket Transcripts
+1. Slash Command Handling + SubCommand Handling
+2. Event Handler
+3. Simple Error Handling
+4. Ticket Management Commands
+5. Ticket Creation and Closing
+6. Ticket Transcripts
 
 ## Technologies Used
 
@@ -22,7 +21,6 @@ The bot is built using the following technologies:
 - [TypeScript](https://www.typescriptlang.org/)
 - [Prisma](https://www.prisma.io/)
 - [Discord.js](https://discord.js.org/)
-- [Discord Hybrid Sharding](https://www.npmjs.com/package/discord-hybrid-sharding)
 - [Discord HTML Transcripts](https://www.npmjs.com/package/discord-html-transcripts)
 
 ## How to Contribute
